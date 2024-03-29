@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #f9fafb;
+    font-family: "Source Sans 3", sans-serif;
+}
+.Header{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 15px;
+  background-color: #374151;
+}
+.logo{
+    border: 1px solid black;
+    width:175px;
+}
+.Header ul{
+    display: flex;
+}
+.Header ul li{
+    list-style-type: none;
+    margin: 10px 25px;
+}
+.Body{
+    background-color: #6b7280;
+}
+.res-card{
+    box-sizing: border-box;
+    width:250px;
+    margin: 5px;   
+    padding: 5px;
+    background-color: #374151;
+    border-radius: 10px;
+}
+.res-card:hover {
+    border: 1px solid #f9fafb;
+}
+.Rest-cont{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 50px;
+}
+.res-card img{
+    height: 48%;
+    width: 240px;
+    border-radius: 10px;
+}
+.search-btn, .filter-btn
+{
+    margin: 5px;
+    background-color: #374151;
+}
+.fsize{
+    font-size: 16px;
+    width: 250px;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+}
