@@ -8,7 +8,6 @@ const MainCont = () => {
     <div className="mainCont">
       <Header />
       <Body />
-
     </div>
   );
 };

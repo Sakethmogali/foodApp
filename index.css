@@ -50,6 +50,10 @@
     width: 240px;
     border-radius: 10px;
 }
+ .inp-search{
+    color: #374151;
+    padding: 5px;
+ }
 .search-btn, .filter-btn
 {
     margin: 5px;
@@ -78,4 +82,12 @@
     padding: 5px;
     background-color: #374151;
     border-radius: 10px;
+}
+.Auth-btn{
+    height: 50px;
+    padding: 5px 15px;
+    background-color: #374151;
+}
+.Auth-btn:hover{
+    border: 1px solid #f9fafb;
 }
