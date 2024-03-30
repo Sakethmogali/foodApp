@@ -31,7 +31,6 @@ const Body = () => {
         <input type="text" className="inp-search" onChange={
           (e)=>{
             setSearchText(e.target.value);
-            setfilterList(RestList.filter((res)=> res.info.name.toLowerCase().includes(SearchText.toLowerCase())));
           }
         }></input>
         <button className="search-btn" onClick={

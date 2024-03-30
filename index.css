@@ -4,10 +4,15 @@
 *{
     margin: 0;
     padding: 0;
-    color: #f9fafb;
+    
+    
     font-family: "Source Sans 3", sans-serif;
 }
+.mainCont{
+    color: #f9fafb;
+}
 .Header{
+    
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -26,6 +31,7 @@
     margin: 10px 25px;
 }
 .Body{
+
     background-color: #6b7280;
 }
 .res-card {
@@ -56,6 +62,7 @@
  }
 .search-btn, .filter-btn
 {
+    color:#f9fafb;
     margin: 5px;
     padding: 5px;
     background-color: #374151;
@@ -86,6 +93,7 @@
 .Auth-btn{
     height: 50px;
     padding: 5px 15px;
+    color:#f9fafb;
     background-color: #374151;
 }
 .Auth-btn:hover{
