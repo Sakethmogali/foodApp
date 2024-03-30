@@ -28,9 +28,10 @@
 .Body{
     background-color: #6b7280;
 }
-.res-card{
+.res-card {
     box-sizing: border-box;
     width:250px;
+    height: 350px;
     margin: 5px;   
     padding: 5px;
     background-color: #374151;
@@ -52,6 +53,7 @@
 .search-btn, .filter-btn
 {
     margin: 5px;
+    padding: 5px;
     background-color: #374151;
 }
 .fsize{
@@ -61,4 +63,19 @@
 .logo{
     width: 60px;
     height: 60px;
+}
+.Shimmer-cont{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 50px;
+}
+.Shimmer-card
+{
+    box-sizing: border-box;
+    width:250px;
+    height: 350px;
+    margin: 5px;   
+    padding: 5px;
+    background-color: #374151;
+    border-radius: 10px;
 }
