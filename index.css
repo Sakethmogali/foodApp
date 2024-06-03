@@ -1,23 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    
-    
     font-family: "Source Sans 3", sans-serif;
 }
 .mainCont{
     color: #f9fafb;
 }
-.Header{
-    
+.restDetails{
+    background-color:#6b7280 ;
+}
+.Header{   
   border: 1px solid black;
   display: flex;
   justify-content: space-between;
   padding: 5px 15px;
   background-color: #374151;
+}
+.nav-header-link{
+    text-decoration: none;
+    color: #f9fafb;
+}
+.nav-header-link:hover{
+    color: #a8afb6;
+}
+.order-summary, .About,.RestarauntMenu
+{
+    background-color: #6b7280;
 }
 .logo{
     border: 1px solid black;
@@ -98,4 +112,4 @@
 }
 .Auth-btn:hover{
     border: 1px solid #f9fafb;
-}
+} */

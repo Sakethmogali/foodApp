@@ -1,6 +1,8 @@
 const About =()=>{
  return (
-    <h1>This is About US Page!</h1>
+    <div className="About">
+      <h1>This is About US Page!</h1>
+    </div>
  );
 };
 export default About;

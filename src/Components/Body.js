@@ -19,21 +19,14 @@ const Body = () => {
     if(RestList.length === 0) 
     {
       return (
-        <div className="Body">
-          <input type="text" className="inp-search"></input>
-        <button className="search-btn" >Search</button>
-        <Shimmer/>
-        </div>
-      );
-    }
-    return (
-      <div className="Body">
-        <input type="text" className="inp-search" onChange={
+        <div className="Body bg-slate-400">
+          <div className="flex">
+          <input type="text" className="inp-search border-black border-2  my-4 px-2 py-[4px]" onChange={
           (e)=>{
             setSearchText(e.target.value);
           }
-        }></input>
-        <button className="search-btn" onClick={
+          }></input>
+          <button className="search-btn" onClick={
           ()=>{
             setfilterList(RestList.filter((res)=> res.info.name.toLowerCase().includes(SearchText.toLowerCase())));
           }
@@ -44,10 +37,35 @@ const Body = () => {
             }
         }
         >Filter</button>
-        <div className="Rest-cont">
+        </div>
+        <Shimmer/>
+        </div>
+      );
+    }
+    return (
+      <div className="Body bg-slate-500 text-slate-50">
+        <div className="flex">
+          <input type="text" className=" w-72 text-gray-900 border-black border-[1px] ml-96 my-4 px-2 py-[4px]" onChange={
+          (e)=>{
+            setSearchText(e.target.value);
+          }
+          }></input>
+          <button className="m-4 bg-slate-800 px-2 rounded-md hover:bg-slate-600 " onClick={
+          ()=>{
+            setfilterList(RestList.filter((res)=> res.info.name.toLowerCase().includes(SearchText.toLowerCase())));
+          }
+        }>Search</button>
+        <button className="m-4 bg-slate-800 px-2 rounded-md " onClick={
+            ()=>{
+              setfilterList(RestList.filter((val)=> val.info.avgRating>4));
+            }
+        }
+        >Filter</button>
+        </div>
+        
+        <div className="flex flex-wrap w-[85%]  mx-auto justify-around" >
          {
-          filterList.map((value)=> <RestarauntCard key={value.info.id} resname={value}/>
-          )
+          filterList.map((value)=> <RestarauntCard key={value.info.id} resname={value}/>)
          }
         </div>
       </div>
