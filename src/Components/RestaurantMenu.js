@@ -42,16 +42,25 @@ useEffect(()=>{
                 <h1 className="text-center my-4">{heading}</h1>
                 <div className="m-2">
                    {  pr=itemsList.map((val)=>{
-                      if(val.card.card["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-                      {
-                        return <Item data={val.card.card} key={val.card.card.restID}/>;
-                      }
-                      else{
-                        return (<div className="flex justify-between w-[86%] mx-auto bg-slate-800 p-4 m-2 shadow-lg shadow-slate-600 font-semibold"> 
-                        <span>{val.card.card.title}</span>
-                    </div>);
-                      }
-                    })
+                    console.log(val);
+                    //   if(val.card.card["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+                    //   {
+                    //     return <Item data={val.card.card} key={val.card.card.restID}/>;
+                    //   }
+                    //   else{
+                    //     return (<div className="flex justify-between w-[88%] mx-auto bg-slate-800 p-4 m-2 shadow-lg shadow-slate-600 font-semibold"> 
+                    //     <span>{val.card.card.title}</span>
+                    // </div>);
+                    if(val.card.card.categories)
+                        {
+                            return (
+                             <NestedItem data={val.card.card} key={val.card.card.restID}/>
+                            );
+                        }
+                        else{  
+                           return  <Item data={val.card.card} key={val.card.card.restID}/>  
+                        }
+                   })
                    }
                 </div>
             </div>
