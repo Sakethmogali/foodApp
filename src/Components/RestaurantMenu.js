@@ -14,7 +14,7 @@ const FetchData = async ()=>
     //    console.log(jsondata?.data?.cards);
         setrestData(jsondata?.data);
 };
-const heading = "|------ MENU -------|"
+const heading = "|----------------- MENU -----------------|"
 useEffect(()=>{
     FetchData();
 },[]); 
@@ -31,10 +31,12 @@ useEffect(()=>{
     return (
         <div className="w-[60%] bg-slate-400 mx-auto text-slate-50 p-3">
             <div className="m-2 text-sm">
-                <h2 className="font-bold py-2 text-2xl">{name}</h2>
-                <p className="flex items-center text-sm"><img className="w-4 h-4 mx-1" src={star}></img><label>{avgRating+"("+totalRatingsString+")"}</label>
+                <h2 className="font-extrabold py-2 text-4xl">{name}</h2>
+                <div className="flex font-bold items-center text-xs my-4">
+                <img className="w-4 h-4 mx-1" src={star}></img>
+                <label>{avgRating+"("+totalRatingsString+")"}</label>
                 <span className="mx-2">{"  - "+ costForTwoMessage}</span>
-                </p>
+                </div>
             </div>
             <div className="my-8">
                 <h1 className="text-center my-4">{heading}</h1>
@@ -42,10 +44,10 @@ useEffect(()=>{
                    {  pr=itemsList.map((val)=>{
                       if(val.card.card["@type"]=="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
                       {
-                            return <Item data={val.card.card}/>;
+                        return <Item data={val.card.card} key={val.card.card.restID}/>;
                       }
                       else{
-                        return (<div className="flex justify-between w-[86%] mx-auto bg-slate-800 p-4 m-2 shadow-lg shadow-slate-600">
+                        return (<div className="flex justify-between w-[86%] mx-auto bg-slate-800 p-4 m-2 shadow-lg shadow-slate-600 font-semibold"> 
                         <span>{val.card.card.title}</span>
                     </div>);
                       }
