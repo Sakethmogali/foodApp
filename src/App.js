@@ -7,41 +7,43 @@ import About from "./Components/About";
 import RestarauntMenu from "./Components/RestaurantMenu";
 import Order from "./Components/Order";
 import Error from "./Components/Error";
-import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import AppStore from "./utils/store";
 const MainCont = () => {
   return (
-    <div className="mainCont">
-      <Header />
-      <Outlet/>
-    </div>
+    <Provider store={AppStore}>
+      <div className="mainCont">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 const rout = createBrowserRouter([
   {
     path: "/",
-    element:<MainCont/>,
-    errorElement:<Error/>,
-    children:
-    [
+    element: <MainCont />,
+    errorElement: <Error />,
+    children: [
       {
-        path:"/",
-        element:<Body/>
+        path: "/",
+        element: <Body />,
       },
       {
-        path:"/About-Us",
-        element:<About/>
+        path: "/About-Us",
+        element: <About />,
       },
       {
-        path:"/Order",
-        element:<Order/>
+        path: "/Order",
+        element: <Order />,
       },
       {
-        path:"/restaurants/:restID",
-        element:<RestarauntMenu/>
-      }
-    ] 
-  }
-  
+        path: "/restaurants/:restID",
+        element: <RestarauntMenu />,
+      },
+    ],
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={rout}/>);
+root.render(<RouterProvider router={rout} />);

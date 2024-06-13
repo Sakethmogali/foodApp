@@ -1,8 +1,11 @@
 import logopic from "../../Images/logo.png"
 import { useState } from "react"
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const cartItems = useSelector((store)=>store.cart.items);
+  console.log(cartItems);
   const [AuthName,setAuthName] = useState("Login");
     return (   
       <div className="Header h-16  flex items-center justify-between bg-slate-900 text-slate-50">   
@@ -11,6 +14,7 @@ const Header = () => {
           <li><Link className="nav-header-link m-4 p-4 hover:text-gray-500" to="/">Home</Link></li>
           <li><Link className="nav-header-link m-4 p-4 hover:text-gray-500" to="/About-Us">About Us</Link></li>
           <li><Link className="nav-header-link m-4 p-4 hover:text-gray-500" to="/order">Order</Link></li>
+          <li className="nav-header-link m-4 p-4 hover:text-gray-500">{"Cart("+cartItems.length+")"}</li>
           <li className="mx-4 px-4">
           <button className="Auth-btn hover:text-gray-500" onClick={
             ()=>{
